@@ -1,8 +1,6 @@
 use santiago::lexer::LexerRules;
 
-/**
- * This function defines the lexer rules for the rscc language.
- */
+/// Returns the default set of lexer rules for the rscc compiler.
 pub fn lexer_rules() -> LexerRules {
     santiago::lexer_rules!(
         // Integer constants, float constants, and string constants
