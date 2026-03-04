@@ -1,4 +1,4 @@
-use rs_clp::frontend::lexer::lexer_rules;
+use rscc::frontend::lexer::lexer_rules;
 
 fn main() {
     // let input = "10. + 20.0 + .30\n30 - 20";
