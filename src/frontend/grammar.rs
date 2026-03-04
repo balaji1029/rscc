@@ -4,7 +4,7 @@ use santiago::grammar::Grammar;
 /**
  * The function that returns the grammar of the language.
  */
-pub fn _grammar() -> Grammar<()> {
+pub fn grammar() -> Grammar<()> {
     santiago::grammar!(
         // "program" => rules "global_decl_stmt_list" "func_def_list";
         "program" => rules "func_def_list";
