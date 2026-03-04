@@ -1,2 +1,2 @@
-mod parser;
+mod grammar;
 pub mod lexer;

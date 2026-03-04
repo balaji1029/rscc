@@ -9,9 +9,12 @@ pub fn lexer_rules() -> LexerRules {
         "DEFAULT" | "INT" = string "int";
         "DEFAULT" | "FLOAT" = string "float";
         "DEFAULT" | "STRING" = string "string";
+        "DEFAULT" | "BOOL" = string "bool";
         "DEFAULT" | "VOID" = string "void";
 
         "DEFAULT" | "NAME" = pattern r"[a-zA-Z_]*";
+
+        "DEFAULT" | "ASSIGN" = string "=";
 
         "DEFAULT" | "PLUS" = string "+";
         "DEFAULT" | "MINUS" = string "-";
@@ -30,7 +33,6 @@ pub fn lexer_rules() -> LexerRules {
 
         "DEFAULT" | "ERROR" = pattern r"." => |lexer| {
             panic!("\trs-clp: Unexpected character '{}'", lexer.matched());
-            // lexer.error("Unexpected character: " + {})
         };
     )
 }
